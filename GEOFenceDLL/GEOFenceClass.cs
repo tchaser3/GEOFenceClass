@@ -32,6 +32,24 @@ namespace GEOFenceDLL
         FindGEOFenceByEmployeeIDDataSet aFindGEOFenceByEmployeeIDDataSet;
         FindGEOFenceByEmployeeIDDataSetTableAdapters.FindGEOFenceByEmployeeIDTableAdapter aFindGEOFenceEmployeeIDTableAdapter;
 
+        FindGEOFenceByVehicleIDDataSet aFindGEOFenceByVehicleIDDataSet;
+        FindGEOFenceByVehicleIDDataSetTableAdapters.FindGEOFenceByVehicleIDTableAdapter aFindGEOFenceByVehicleIDTableAdapter;
+
+        public FindGEOFenceByVehicleIDDataSet FindGEOFenceByVehicleID(int intVehicleID, DateTime datStartDate, DateTime datEndDate)
+        {
+            try
+            {
+                aFindGEOFenceByVehicleIDDataSet = new FindGEOFenceByVehicleIDDataSet();
+                aFindGEOFenceByVehicleIDTableAdapter = new FindGEOFenceByVehicleIDDataSetTableAdapters.FindGEOFenceByVehicleIDTableAdapter();
+                aFindGEOFenceByVehicleIDTableAdapter.Fill(aFindGEOFenceByVehicleIDDataSet.FindGEOFenceByVehicleID, intVehicleID, datStartDate, datEndDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "GEO Fence Class // Find GEO Fence By Vehicle ID " + Ex.Message);
+            }
+
+            return aFindGEOFenceByVehicleIDDataSet;
+        }
         public FindGEOFenceByEmployeeIDDataSet FindGEOFenceByEmployeeID(int intEmployeeID, DateTime datStartDate, DateTime datEndDate)
         {
             try
