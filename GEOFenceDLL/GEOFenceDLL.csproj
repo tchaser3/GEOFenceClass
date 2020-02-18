@@ -54,6 +54,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FindGEOFenceByVehicleIDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FindGEOFenceNoDriverAssignedDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindGEOFenceNoDriverAssignedDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FindGEOFenceTransactionByExactDateDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -105,6 +110,17 @@
     </None>
     <None Include="FindGEOFenceByVehicleIDDataSet.xss">
       <DependentUpon>FindGEOFenceByVehicleIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindGEOFenceNoDriverAssignedDataSet.xsc">
+      <DependentUpon>FindGEOFenceNoDriverAssignedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindGEOFenceNoDriverAssignedDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindGEOFenceNoDriverAssignedDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindGEOFenceNoDriverAssignedDataSet.xss">
+      <DependentUpon>FindGEOFenceNoDriverAssignedDataSet.xsd</DependentUpon>
     </None>
     <None Include="FindGEOFenceTransactionByExactDateDataSet.xsc">
       <DependentUpon>FindGEOFenceTransactionByExactDateDataSet.xsd</DependentUpon>

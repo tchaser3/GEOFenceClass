@@ -35,6 +35,24 @@ namespace GEOFenceDLL
         FindGEOFenceByVehicleIDDataSet aFindGEOFenceByVehicleIDDataSet;
         FindGEOFenceByVehicleIDDataSetTableAdapters.FindGEOFenceByVehicleIDTableAdapter aFindGEOFenceByVehicleIDTableAdapter;
 
+        FindGEOFenceNoDriverAssignedDataSet aFindGEOFenceNoDriverAssignedDataSet;
+        FindGEOFenceNoDriverAssignedDataSetTableAdapters.FindGEOFenceNoDriverAssignedTableAdapter aFindGEOFenceNoDriverAssignedTableAdapter;
+
+        public FindGEOFenceNoDriverAssignedDataSet FindGEOFenceNoDriverAssigned(DateTime datStartDate, DateTime datEndDate)
+        {
+            try
+            {
+                aFindGEOFenceNoDriverAssignedDataSet = new FindGEOFenceNoDriverAssignedDataSet();
+                aFindGEOFenceNoDriverAssignedTableAdapter = new FindGEOFenceNoDriverAssignedDataSetTableAdapters.FindGEOFenceNoDriverAssignedTableAdapter();
+                aFindGEOFenceNoDriverAssignedTableAdapter.Fill(aFindGEOFenceNoDriverAssignedDataSet.FindGEOFenceNoDriverAssigned, datStartDate, datEndDate);
+            }
+            catch (Exception Ex)
+            {
+                TheEventLogClass.InsertEventLogEntry(DateTime.Now, "GEO Fence Class // Find GEO Fence No Driver Assigned " + Ex.Message);
+            }
+
+            return aFindGEOFenceNoDriverAssignedDataSet;
+        }
         public FindGEOFenceByVehicleIDDataSet FindGEOFenceByVehicleID(int intVehicleID, DateTime datStartDate, DateTime datEndDate)
         {
             try
