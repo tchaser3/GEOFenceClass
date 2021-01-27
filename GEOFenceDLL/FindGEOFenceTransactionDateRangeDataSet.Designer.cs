@@ -293,6 +293,8 @@ namespace GEOFenceDLL {
             
             private global::System.Data.DataColumn columnDriver;
             
+            private global::System.Data.DataColumn columnInSide;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public FindGEOFenceTransasctionDateRangeDataTable() {
@@ -384,6 +386,14 @@ namespace GEOFenceDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn InSideColumn {
+                get {
+                    return this.columnInSide;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -419,7 +429,7 @@ namespace GEOFenceDLL {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FindGEOFenceTransasctionDateRangeRow AddFindGEOFenceTransasctionDateRangeRow(System.DateTime EventDate, string VehicleNumber, string FirstName, string LastName, string AssignedOffice, string Driver) {
+            public FindGEOFenceTransasctionDateRangeRow AddFindGEOFenceTransasctionDateRangeRow(System.DateTime EventDate, string VehicleNumber, string FirstName, string LastName, string AssignedOffice, string Driver, bool InSide) {
                 FindGEOFenceTransasctionDateRangeRow rowFindGEOFenceTransasctionDateRangeRow = ((FindGEOFenceTransasctionDateRangeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -428,7 +438,8 @@ namespace GEOFenceDLL {
                         FirstName,
                         LastName,
                         AssignedOffice,
-                        Driver};
+                        Driver,
+                        InSide};
                 rowFindGEOFenceTransasctionDateRangeRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFindGEOFenceTransasctionDateRangeRow);
                 return rowFindGEOFenceTransasctionDateRangeRow;
@@ -465,6 +476,7 @@ namespace GEOFenceDLL {
                 this.columnLastName = base.Columns["LastName"];
                 this.columnAssignedOffice = base.Columns["AssignedOffice"];
                 this.columnDriver = base.Columns["Driver"];
+                this.columnInSide = base.Columns["InSide"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -484,6 +496,8 @@ namespace GEOFenceDLL {
                 base.Columns.Add(this.columnAssignedOffice);
                 this.columnDriver = new global::System.Data.DataColumn("Driver", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDriver);
+                this.columnInSide = new global::System.Data.DataColumn("InSide", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInSide);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnTransactionID}, true));
                 this.columnTransactionID.AutoIncrement = true;
@@ -501,6 +515,7 @@ namespace GEOFenceDLL {
                 this.columnAssignedOffice.MaxLength = 2147483647;
                 this.columnDriver.AllowDBNull = false;
                 this.columnDriver.MaxLength = 2147483647;
+                this.columnInSide.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -717,6 +732,17 @@ namespace GEOFenceDLL {
                     this[this.tableFindGEOFenceTransasctionDateRange.DriverColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool InSide {
+                get {
+                    return ((bool)(this[this.tableFindGEOFenceTransasctionDateRange.InSideColumn]));
+                }
+                set {
+                    this[this.tableFindGEOFenceTransasctionDateRange.InSideColumn] = value;
+                }
+            }
         }
         
         /// <summary>
@@ -885,6 +911,7 @@ namespace GEOFenceDLL.FindGEOFenceTransactionDateRangeDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("LastName", "LastName");
             tableMapping.ColumnMappings.Add("AssignedOffice", "AssignedOffice");
             tableMapping.ColumnMappings.Add("Driver", "Driver");
+            tableMapping.ColumnMappings.Add("InSide", "InSide");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

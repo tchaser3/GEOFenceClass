@@ -30,6 +30,7 @@
               <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
               <Mapping SourceColumn="AssignedOffice" DataSetColumn="AssignedOffice" />
               <Mapping SourceColumn="Driver" DataSetColumn="Driver" />
+              <Mapping SourceColumn="InSide" DataSetColumn="InSide" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -41,7 +42,7 @@
   <xs:element name="FindGEOFenceTransactionDateRangeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="FindGEOFenceTransactionDateRangeDataSet" msprop:Generator_UserDSName="FindGEOFenceTransactionDateRangeDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="FindGEOFenceTransasctionDateRange" msprop:Generator_TableClassName="FindGEOFenceTransasctionDateRangeDataTable" msprop:Generator_TableVarName="tableFindGEOFenceTransasctionDateRange" msprop:Generator_TablePropName="FindGEOFenceTransasctionDateRange" msprop:Generator_RowDeletingName="FindGEOFenceTransasctionDateRangeRowDeleting" msprop:Generator_RowChangingName="FindGEOFenceTransasctionDateRangeRowChanging" msprop:Generator_RowEvHandlerName="FindGEOFenceTransasctionDateRangeRowChangeEventHandler" msprop:Generator_RowDeletedName="FindGEOFenceTransasctionDateRangeRowDeleted" msprop:Generator_UserTableName="FindGEOFenceTransasctionDateRange" msprop:Generator_RowChangedName="FindGEOFenceTransasctionDateRangeRowChanged" msprop:Generator_RowEvArgName="FindGEOFenceTransasctionDateRangeRowChangeEvent" msprop:Generator_RowClassName="FindGEOFenceTransasctionDateRangeRow">
+        <xs:element name="FindGEOFenceTransasctionDateRange" msprop:Generator_TableClassName="FindGEOFenceTransasctionDateRangeDataTable" msprop:Generator_TableVarName="tableFindGEOFenceTransasctionDateRange" msprop:Generator_RowChangedName="FindGEOFenceTransasctionDateRangeRowChanged" msprop:Generator_TablePropName="FindGEOFenceTransasctionDateRange" msprop:Generator_RowDeletingName="FindGEOFenceTransasctionDateRangeRowDeleting" msprop:Generator_RowChangingName="FindGEOFenceTransasctionDateRangeRowChanging" msprop:Generator_RowEvHandlerName="FindGEOFenceTransasctionDateRangeRowChangeEventHandler" msprop:Generator_RowDeletedName="FindGEOFenceTransasctionDateRangeRowDeleted" msprop:Generator_RowClassName="FindGEOFenceTransasctionDateRangeRow" msprop:Generator_UserTableName="FindGEOFenceTransasctionDateRange" msprop:Generator_RowEvArgName="FindGEOFenceTransasctionDateRangeRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TransactionID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnTransactionID" msprop:Generator_ColumnPropNameInRow="TransactionID" msprop:Generator_ColumnPropNameInTable="TransactionIDColumn" msprop:Generator_UserColumnName="TransactionID" type="xs:int" />
@@ -81,6 +82,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="InSide" msprop:Generator_ColumnVarNameInTable="columnInSide" msprop:Generator_ColumnPropNameInRow="InSide" msprop:Generator_ColumnPropNameInTable="InSideColumn" msprop:Generator_UserColumnName="InSide" type="xs:boolean" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
